@@ -1,29 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+/*RWD mixins
+@include media-breakpoint-up(sm) {
+	@media (min-width: 544px) {}
+}
+@include media-breakpoint-down(sm) {
+	@media (min-width: 544px) and (max-width: 768px) {}
+}
+@include media-breakpoint-between(sm, md) {
+	@media (min-width: 576px) and (max-width: 991px) {}
+}*/
 * {
   box-sizing: border-box;
 }
 
 .jumbotron {
-  min-height: 90vh;
+  min-height: 70vh;
   background-image: url(http://i63.tinypic.com/28vfx4p.png);
   background-position: top center;
+  background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
-@media (min-width: 576px) {
-  body {
-    background-color: aqua;
+@media (min-width: 992px) {
+  .jumbotron .jumbotron-fade {
+    position: absolute;
+    background-image: linear-gradient(to top, #ffffff 5%, rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.jumbotron .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron .navbar-brand {
+  font-family: "Montserrat";
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -1.03px;
+}
+
+@media (max-width: 767.98px) {
+  .jumbotron .navbar-brand {
+    margin-right: 2vw;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .jumbotron .navbar-brand {
+    margin-right: 4vw;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron .navbar-brand:hover {
+    color: #00b0ff;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron .navbar-brand {
+    padding: 0;
+    margin-right: 8vw;
+    font-size: 34px;
+  }
+}
+
+.jumbotron .navbar-toggler-icon {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .jumbotron .nav-icons {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .jumbotron .nav-icons {
+    margin-left: 4vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron .nav-icons {
+    margin-left: 8vw;
+  }
+}
+
+.jumbotron .nav-icons i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 15px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .jumbotron .nav-icons i:hover {
+    background-color: #00b0ff;
+    color: #000000;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron .nav-icons i {
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    margin: 0 3px;
   }
 }
 
 @media (max-width: 767.98px) {
-  body {
-    background-color: red;
+  .jumbotron .navbar-nav {
+    text-align: center;
   }
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-  body {
-    background-color: yellow;
+.jumbotron .navbar-nav .nav-link {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 7px;
+}
+
+@media (min-width: 992px) {
+  .jumbotron .navbar-nav .nav-link:hover {
+    background-color: #00b0ff;
+    color: #ffffff;
+  }
+}
+
+.jumbotron .dropdown-menu {
+  opacity: 0.5;
+}
+
+.jumbotron .dropdown-menu .dropdown-item {
+  font-family: "Montserrat";
+}
+
+.jumbotron .dropdown-menu .dropdown-item:hover {
+  background-color: #00b0ff;
+  color: #ffffff;
+}
+
+.jumbotron .header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
+  transform: translateY(100%);
+}
+
+@media (min-width: 992px) {
+  .jumbotron .header-text {
+    transform: translateY(125%);
+  }
+}
+
+.jumbotron h1 {
+  font-family: "Playfair Display";
+  font-style: italic;
+  color: #000000;
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron h1 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) {
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron h1 {
+    font-size: 50px;
+  }
+}
+
+.jumbotron h3 {
+  font-family: "Playfair Display";
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.64);
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron h3 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 576px) {
+  .jumbotron h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron h3 {
+    font-size: 24px;
   }
 }
 

@@ -1,10 +1,29 @@
 @charset 'utf-8';
 
 @import "vendor/bootstrap/scss/mixins/_breakpoints.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-* {
-	box-sizing: border-box;
+//fonts
+$main-font: 'Montserrat';
+$second-font: 'Raleway';
+$third-font: 'Playfair Display';
+
+//font-colors
+$main-font-color: #000000;
+$second-font-color: #ffffff;
+
+/*RWD mixins
+@include media-breakpoint-up(sm) {
+	@media (min-width: 544px) {}
 }
+@include media-breakpoint-down(sm) {
+	@media (min-width: 544px) and (max-width: 768px) {}
+}
+@include media-breakpoint-between(sm, md) {
+	@media (min-width: 576px) and (max-width: 991px) {}
+}*/
 
 $grid-breakpoints: (
 	"xs": 0,
@@ -14,22 +33,171 @@ $grid-breakpoints: (
 	"xl": 1200px
 );
 
-.jumbotron {
-	min-height: 90vh;
-	background-image: url(http://i63.tinypic.com/28vfx4p.png);
-	background-position: top center;
-	//background-size: cover;
-	background-repeat: no-repeat;
+
+* {
+	box-sizing: border-box;
 }
 
-body {
-	@include media-breakpoint-up(sm) {
-		background-color: aqua;
+.jumbotron {
+	min-height: 70vh;
+	background-image: url(http://i63.tinypic.com/28vfx4p.png);
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	@include media-breakpoint-up(lg) {
+		.jumbotron-fade {
+			position: absolute;
+			background-image: linear-gradient(to top, #ffffff 5%, rgba(255, 255, 255, 0) 70%);
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
 	}
-	@include media-breakpoint-down(sm) {
-		background-color: red;
+	.container-fluid {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
 	}
-	@include media-breakpoint-between(sm, md) {
-		background-color: yellow;
+	.navbar-brand {
+		font-family: $main-font;
+		color: $main-font-color;
+		font-weight: 700;
+		letter-spacing: -1.03px;
+		@include media-breakpoint-between(xs, sm) {
+			margin-right: 2vw;
+		}
+		@include media-breakpoint-between(sm, lg) {
+			margin-right: 4vw;
+			font-size: 25px;
+		}
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				color: #00b0ff;
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0;
+			margin-right: 8vw;
+			font-size: 34px;
+		}
+		
+	}
+	.navbar-toggler-icon {
+		font-size: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav-icons {
+		@include media-breakpoint-between(xs, sm) {
+			display: none;
+		}
+		@include media-breakpoint-between(sm, lg) {
+			margin-left: 4vw;	
+		}
+		@include media-breakpoint-up(xl) {
+			margin-left: 8vw;
+		}
+		i {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 25px;
+			height: 25px;
+			background-color: $main-font-color;
+			color: $second-font-color;
+			border-radius: 50%;
+			font-size: 15px;
+			margin: 0 2px;
+			cursor: pointer;
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: #00b0ff;
+					color: $main-font-color;
+				}
+			} 
+			@include media-breakpoint-up(xl) {
+				font-size: 18px;
+				width: 36px;
+				height: 36px;
+				margin: 0 3px;
+			}
+			
+		}
+	}
+	.navbar-nav {
+		@include media-breakpoint-between(xs, sm) {
+			text-align: center;
+		}
+		.nav-link {
+			font-family: $main-font;
+			font-size: 14px;
+			color: $main-font-color;
+			font-weight: 700;
+			margin: 0 7px;
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: #00b0ff;
+					color: $second-font-color;
+				}
+			}
+		}
+	}
+	.dropdown-menu {
+		opacity: 0.5;
+		.dropdown-item {
+			font-family: $main-font;
+			&:hover {
+				background-color: #00b0ff;
+				color: $second-font-color;
+			}
+		}
+	}
+	.header-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		min-height: 100%;
+		transform: translateY(100%);
+		@include media-breakpoint-up(lg) {
+			transform: translateY(125%);
+		}
+	}
+	h1 {
+		font-family: $third-font;
+		font-style: italic;
+		color: $main-font-color;
+		@include media-breakpoint-down(xs) {
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: 30px;
+		}
+		@include media-breakpoint-between(md, lg) {
+			font-size: 40px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 50px;
+		}
+	}
+	h3 {
+		font-family: $third-font;
+		font-style: italic;
+		color: $second-font-color;
+		text-shadow: 0 3px 15px rgba(0, 0, 0, 0.64);
+		@include media-breakpoint-down(xs) {
+			font-size: 18px;
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: 20px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 24px;
+		}
 	}
 }
+
