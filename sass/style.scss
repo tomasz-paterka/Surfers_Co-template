@@ -36,6 +36,7 @@ $grid-breakpoints: (
 
 * {
 	box-sizing: border-box;
+	//border: 1px solid black;
 }
 
 .jumbotron {
@@ -200,4 +201,24 @@ $grid-breakpoints: (
 		}
 	}
 }
-
+.card {
+	//background-color: red;
+	margin-bottom: 200px;
+	.carousel {
+		background-color: #fff;
+		min-height: 600px;
+		transform: translateY(-50%);
+		box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.34);
+		.triangle-topleft {
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-top: 600px solid #00d2ff;
+			border-right: 500px solid transparent;
+		}
+		.carousel-item {
+			
+		}
+		
+	}
+}

@@ -234,4 +234,23 @@
   }
 }
 
+.card {
+  margin-bottom: 200px;
+}
+
+.card .carousel {
+  background-color: #fff;
+  min-height: 600px;
+  transform: translateY(-50%);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.34);
+}
+
+.card .carousel .triangle-topleft {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 600px solid #00d2ff;
+  border-right: 500px solid transparent;
+}
+
 /*# sourceMappingURL=style.css.map */
