@@ -39,6 +39,11 @@ $grid-breakpoints: (
 	//border: 1px solid red;
 }
 
+body {
+	@include media-breakpoint-between(sm, md) {
+		font-size: 14px;
+	}
+}
 .jumbotron {
 	min-height: 70vh;
 	background-image: url(http://i63.tinypic.com/28vfx4p.png);
@@ -202,15 +207,20 @@ $grid-breakpoints: (
 	}
 }
 .card {
-	margin-bottom: 200px;
+	
 	.carousel {
-		visibility: hidden;
+		//visibility: hidden;
 		@include media-breakpoint-up(xl) {
 			visibility: visible;
 		}
+		max-width: 100%;
 		background-color: #fff;
-		min-height: 600px;
-		transform: translateY(-50%);
+		@include media-breakpoint-up(lg) {
+			transform: translateY(-25%);
+		}
+		@include media-breakpoint-up(xl) {
+			transform: translateY(-40%);
+		}
 		box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.34);
 		[class*='col-'] {
 			padding: 0;
@@ -227,35 +237,50 @@ $grid-breakpoints: (
 			}
 		}
 		
-		.triangle-topleft {
+		.triangle-up-left {
 			position: absolute;
 			width: 0;
 			height: 0;
-			border-top: 600px solid #00d2ff;
+			padding-bottom: 50%;
+			padding-left: 50%;
+			overflow: hidden;
+			//border-top: 558px solid #00d2ff;
+			//border-right: 500px solid transparent;
+		}
+		.triangle-up-left:after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			margin-left: -558px;
+			border-top: 525px solid #00d2ff;
 			border-right: 500px solid transparent;
 		}
 		.boards-text {
 			position: absolute;
 			font-family: $main-font;
 			writing-mode: vertical-rl;
-			font-size: 120px;
+			font-size: 110px;
 			margin: 0;
 			font-weight: 700;
 			text-transform: uppercase;
 			opacity: 0.03;
 			color: $main-font-color;
+			display: inline-block;
 		}
 		.carousel-item {
 			margin-top: 30px;
-			margin-left: 30px;
+			margin-left: 20px;
 			.board-pics {
-				display: inline-flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+				@include media-breakpoint-between(md, xl) {
+					display: inline-flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
 				img {
-					width: 80px;
-					height: 80px;
+					width: 69px;
+					height: 69px;
 					margin: 2px;
 					cursor: pointer;
 					&:hover {
@@ -265,8 +290,8 @@ $grid-breakpoints: (
 			}
 			
 			.board-desc {
-				margin-top: 30px;
-				max-width: 400px;
+				margin-top: 10px;
+				max-width: 450px;
 				h4 {
 					color: $main-font-color;
 					font-family: $main-font;
@@ -304,12 +329,12 @@ $grid-breakpoints: (
 				.buy {
 					display: flex;
 					align-items: center;
-					margin: 30px 0;
+					margin: 20px 0;
 				}
 				.price {
 					color: $main-font-color;
 					font-family: $main-font;
-					font-size: 24px;
+					font-size: 20px;			
 					font-weight: 700;
 					margin-right: 40px;
 				}
@@ -322,7 +347,7 @@ $grid-breakpoints: (
 					text-transform: uppercase;
 					letter-spacing: 1.4px;
 					border-radius: 0;
-					padding: 10px 25px;
+					padding: 8px 20px;
 				}
 				.all-boards {
 					color: #00b0ff;
