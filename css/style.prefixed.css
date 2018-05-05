@@ -252,10 +252,32 @@
 }
 
 .card .carousel {
+  visibility: hidden;
   background-color: #fff;
   min-height: 600px;
   transform: translateY(-50%);
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.34);
+}
+
+@media (min-width: 1200px) {
+  .card .carousel {
+    visibility: visible;
+  }
+}
+
+.card .carousel [class*='col-'] {
+  padding: 0;
+}
+
+.card .carousel .carousel-control-prev-icon, .card .carousel .carousel-control-next-icon {
+  background-color: #f2d800;
+  width: 38px;
+  height: 38px;
+}
+
+.card .carousel .carousel-indicators li {
+  background-color: #f2d800;
+  cursor: pointer;
 }
 
 .card .carousel .triangle-topleft {
@@ -264,5 +286,123 @@
   height: 0;
   border-top: 600px solid #00d2ff;
   border-right: 500px solid transparent;
+}
+
+.card .carousel .boards-text {
+  position: absolute;
+  font-family: "Montserrat";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-size: 120px;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.03;
+  color: #000000;
+}
+
+.card .carousel .carousel-item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.card .carousel .carousel-item .board-pics {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.card .carousel .carousel-item .board-pics img {
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.card .carousel .carousel-item .board-pics img:hover {
+  border: 3px solid #00b0ff;
+}
+
+.card .carousel .carousel-item .board-desc {
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.card .carousel .carousel-item .board-desc h4 {
+  color: #000000;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.card .carousel .carousel-item .board-desc .stars {
+  color: #787878;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 0 30px;
+}
+
+.card .carousel .carousel-item .board-desc .nav-link.active {
+  border-color: #fff #fff #00b0ff;
+  border-bottom: 3px solid #00b0ff;
+  color: #000000;
+}
+
+.card .carousel .carousel-item .board-desc .nav-link {
+  color: #a0a0a0;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.card .carousel .carousel-item .board-desc .tab-content {
+  margin-top: 20px;
+  color: #787878;
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card .carousel .carousel-item .board-desc .buy {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 30px 0;
+}
+
+.card .carousel .carousel-item .board-desc .price {
+  color: #000000;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 40px;
+}
+
+.card .carousel .carousel-item .board-desc .btn {
+  background-color: #00b0ff;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  border-radius: 0;
+  padding: 10px 25px;
+}
+
+.card .carousel .carousel-item .board-desc .all-boards {
+  color: #00b0ff;
+  font-family: "Montserrat";
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
