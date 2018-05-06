@@ -15,12 +15,6 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-  body {
-    font-size: 14px;
-  }
-}
-
 .jumbotron {
   min-height: 70vh;
   background-image: url(http://i63.tinypic.com/28vfx4p.png);
@@ -246,12 +240,6 @@
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.34);
 }
 
-@media (min-width: 1200px) {
-  .card .carousel {
-    visibility: visible;
-  }
-}
-
 @media (min-width: 992px) {
   .card .carousel {
     transform: translateY(-25%);
@@ -260,7 +248,7 @@
 
 @media (min-width: 1200px) {
   .card .carousel {
-    transform: translateY(-40%);
+    transform: translateY(-35%);
   }
 }
 
@@ -294,7 +282,7 @@
   width: 0;
   height: 0;
   margin-left: -558px;
-  border-top: 525px solid #00d2ff;
+  border-top: 558px solid #00d2ff;
   border-right: 500px solid transparent;
 }
 
@@ -313,7 +301,7 @@
 
 .card .carousel .carousel-item {
   margin-top: 30px;
-  margin-left: 20px;
+  padding: 30px;
 }
 
 @media (min-width: 768px) {
@@ -332,8 +320,10 @@
   cursor: pointer;
 }
 
-.card .carousel .carousel-item .board-pics img:hover {
-  border: 3px solid #00b0ff;
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-pics img:hover {
+    border: 3px solid #00b0ff;
+  }
 }
 
 .card .carousel .carousel-item .board-desc {
@@ -341,12 +331,24 @@
   max-width: 450px;
 }
 
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc {
+    padding: 0 15px;
+  }
+}
+
 .card .carousel .carousel-item .board-desc h4 {
   color: #000000;
   font-family: "Montserrat";
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 26px;
+}
+
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc h4 {
+    font-size: 20px;
+  }
 }
 
 .card .carousel .carousel-item .board-desc .stars {
@@ -366,50 +368,91 @@
 .card .carousel .carousel-item .board-desc .nav-link {
   color: #a0a0a0;
   font-family: "Raleway";
-  font-size: 14px;
+  padding: 4px 8px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.7px;
 }
 
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc .nav-link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 .card .carousel .carousel-item .board-desc .tab-content {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #787878;
   font-family: "Raleway";
-  font-size: 16px;
+  font-size: 12px;
   line-height: 24px;
+}
+
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc .tab-content {
+    margin-top: 20px;
+    font-size: 16px;
+  }
 }
 
 .card .carousel .carousel-item .board-desc .buy {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 10px 0;
+}
+
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc .buy {
+    margin: 20px 0;
+  }
 }
 
 .card .carousel .carousel-item .board-desc .price {
   color: #000000;
   font-family: "Montserrat";
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
-  margin-right: 40px;
+  margin-right: 20px;
+}
+
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc .price {
+    font-size: 20px;
+    margin-right: 40px;
+  }
 }
 
 .card .carousel .carousel-item .board-desc .btn {
   background-color: #00b0ff;
   color: #ffffff;
   font-family: "Montserrat";
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.4px;
   border-radius: 0;
-  padding: 8px 20px;
+  padding: 4px 10px;
+}
+
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
 }
 
 .card .carousel .carousel-item .board-desc .all-boards {
   color: #00b0ff;
   font-family: "Montserrat";
-  font-size: 16px;
+  font-size: 12px;
+}
+
+@media (min-width: 992px) {
+  .card .carousel .carousel-item .board-desc .all-boards {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

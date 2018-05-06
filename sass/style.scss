@@ -39,11 +39,6 @@ $grid-breakpoints: (
 	//border: 1px solid red;
 }
 
-body {
-	@include media-breakpoint-between(sm, md) {
-		font-size: 14px;
-	}
-}
 .jumbotron {
 	min-height: 70vh;
 	background-image: url(http://i63.tinypic.com/28vfx4p.png);
@@ -207,19 +202,14 @@ body {
 	}
 }
 .card {
-	
 	.carousel {
-		//visibility: hidden;
-		@include media-breakpoint-up(xl) {
-			visibility: visible;
-		}
 		max-width: 100%;
 		background-color: #fff;
 		@include media-breakpoint-up(lg) {
 			transform: translateY(-25%);
 		}
 		@include media-breakpoint-up(xl) {
-			transform: translateY(-40%);
+			transform: translateY(-35%);
 		}
 		box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.34);
 		[class*='col-'] {
@@ -253,7 +243,7 @@ body {
 			width: 0;
 			height: 0;
 			margin-left: -558px;
-			border-top: 525px solid #00d2ff;
+			border-top: 558px solid #00d2ff;
 			border-right: 500px solid transparent;
 		}
 		.boards-text {
@@ -270,7 +260,7 @@ body {
 		}
 		.carousel-item {
 			margin-top: 30px;
-			margin-left: 20px;
+			padding: 30px;
 			.board-pics {
 				@include media-breakpoint-between(md, xl) {
 					display: inline-flex;
@@ -283,21 +273,28 @@ body {
 					height: 69px;
 					margin: 2px;
 					cursor: pointer;
-					&:hover {
-						border: 3px solid #00b0ff;
+					@include media-breakpoint-up(lg) {
+						&:hover {
+							border: 3px solid #00b0ff;
+						}
 					}
 				}
 			}
-			
 			.board-desc {
 				margin-top: 10px;
 				max-width: 450px;
+				@include media-breakpoint-between(lg, xl) {
+					padding: 0 15px;
+				}
 				h4 {
 					color: $main-font-color;
 					font-family: $main-font;
-					font-size: 20px;
+					font-size: 15px;
 					font-weight: 700;
 					line-height: 26px;
+					@include media-breakpoint-up(lg) {
+						font-size: 20px;
+					}
 				}
 				.stars {
 					color: #787878;
@@ -314,45 +311,68 @@ body {
 				.nav-link {
 					color: #a0a0a0;
 					font-family: $second-font;
-					font-size: 14px;
+					padding: 4px 8px;
+					font-size: 12px;
 					font-weight: 700;
 					text-transform: uppercase;
 					letter-spacing: 0.7px;
+					@include media-breakpoint-up(lg) {
+						font-size: 14px;
+						padding: 8px 16px;
+					}
 				}
 				.tab-content {
-					margin-top: 20px;
+					margin-top: 10px;
 					color: #787878;
 					font-family: $second-font;
-					font-size: 16px;
+					font-size: 12px;
 					line-height: 24px;
+					@include media-breakpoint-up(lg) {
+						margin-top: 20px;
+						font-size: 16px;
+					}
 				}
 				.buy {
 					display: flex;
 					align-items: center;
-					margin: 20px 0;
+					margin: 10px 0;
+					@include media-breakpoint-up(lg) {
+						margin: 20px 0;
+					}
 				}
 				.price {
 					color: $main-font-color;
 					font-family: $main-font;
-					font-size: 20px;			
+					font-size: 15px;			
 					font-weight: 700;
-					margin-right: 40px;
+					margin-right: 20px;
+					@include media-breakpoint-up(lg) {
+						font-size: 20px;
+						margin-right: 40px;
+					}
 				}
 				.btn {
 					background-color: #00b0ff;
 					color: $second-font-color;
 					font-family: $main-font;
-					font-size: 14px;
+					font-size: 10px;
 					font-weight: 700;
 					text-transform: uppercase;
 					letter-spacing: 1.4px;
 					border-radius: 0;
-					padding: 8px 20px;
+					padding: 4px 10px;
+					@include media-breakpoint-up(lg) {
+						font-size: 14px;
+						padding: 8px 20px;
+					}
 				}
 				.all-boards {
 					color: #00b0ff;
 					font-family: $main-font;
-					font-size: 16px;
+					font-size: 12px;
+					@include media-breakpoint-up(lg) {
+						font-size: 16px;
+					}
 				}
 			}
 		}
