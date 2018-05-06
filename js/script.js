@@ -1,6 +1,3 @@
-$(function() {
-	$('.carousel').carousel('pause');
-});
 
 
 	
