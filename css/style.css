@@ -170,12 +170,12 @@
   align-items: center;
   flex-direction: column;
   min-height: 100%;
-  transform: translateY(100%);
+  margin-top: 50px;
 }
 
 @media (min-width: 992px) {
   .jumbotron .header-text {
-    transform: translateY(125%);
+    margin-top: 150px;
   }
 }
 
@@ -489,19 +489,30 @@
 }
 
 .about-us .about-us-pic {
-  background-image: url(../images/about-us-2.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 70vh;
-  position: relative;
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  .about-us .about-us-pic {
+    background-image: url(../images/about-us-2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 70vh;
+    position: relative;
+  }
 }
 
 .about-us .about-us-pic .about-us-content {
-  position: absolute;
-  bottom: 0;
   background-color: #fff;
+}
+
+@media (min-width: 992px) {
+  .about-us .about-us-pic .about-us-content {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .about-us .about-us-pic .about-us-content .about-us-text {
@@ -565,26 +576,49 @@
 }
 
 .about-us .about-us-pic .about-us-content-2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   padding: 0;
 }
 
-.about-us .about-us-pic .about-us-content-2 img {
-  cursor: pointer;
+@media (max-width: 1199.98px) {
+  .about-us .about-us-pic .about-us-content-2 {
+    text-align: center;
+  }
 }
 
 @media (min-width: 992px) {
-  .about-us .about-us-pic .about-us-content-2 img {
+  .about-us .about-us-pic .about-us-content-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.about-us .about-us-pic .about-us-content-2 .about-us-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+@media (min-width: 992px) {
+  .about-us .about-us-pic .about-us-content-2 .about-us-link {
     transform: translate(3rem, 12rem);
   }
 }
 
 @media (min-width: 1200px) {
-  .about-us .about-us-pic .about-us-content-2 img {
+  .about-us .about-us-pic .about-us-content-2 .about-us-link {
     transform: translate(5rem, 14rem);
   }
+}
+
+.about-us .about-us-pic .about-us-content-2 .fa-play-circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

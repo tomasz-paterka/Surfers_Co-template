@@ -163,9 +163,9 @@ $grid-breakpoints: (
 		align-items: center;
 		flex-direction: column;
 		min-height: 100%;
-		transform: translateY(100%);
+		margin-top: 50px;
 		@include media-breakpoint-up(lg) {
-			transform: translateY(125%);
+			margin-top: 150px;
 		}
 	}
 	h1 {
@@ -222,7 +222,6 @@ $grid-breakpoints: (
 				cursor: pointer;
 			}
 		}
-		
 		.triangle-up-left {
 			position: absolute;
 			width: 0;
@@ -401,17 +400,22 @@ $grid-breakpoints: (
 		}
 	}
 	.about-us-pic {
-		background-image: url(../images/about-us-2.jpg);
-		background-repeat: no-repeat;
-		background-position: top center;
-		background-size: cover;
-		background-attachment: fixed;
-		min-height: 70vh;
-		position: relative;
+		margin-top: 30px;
+		@include media-breakpoint-up(lg) {
+			background-image: url(../images/about-us-2.jpg);
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: cover;
+			background-attachment: fixed;
+			min-height: 70vh;
+			position: relative;
+		}
 		.about-us-content {
-			position: absolute;
-			bottom: 0;
 			background-color: #fff;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				bottom: 0;
+			}
 			.about-us-text {
 				padding: 20px;
 				@include media-breakpoint-up(xl) {
@@ -456,18 +460,34 @@ $grid-breakpoints: (
 			}
 		}
 		.about-us-content-2 {
-			position: absolute;
-			bottom: 0;
-			right: 0;
 			padding: 0;
-			img {
-				cursor: pointer;
+			@include media-breakpoint-down(lg) {
+				text-align: center;
+			}
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			.about-us-link {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 5px;
 				@include media-breakpoint-up(lg) {
 					transform: translate(3rem, 12rem);
 				}
 				@include media-breakpoint-up(xl) {
 					transform: translate(5rem, 14rem);
 				}
+			}
+			.fa-play-circle {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $second-font-color;
+				font-size: 50px;
 			}
 		}
 	}
