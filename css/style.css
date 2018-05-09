@@ -171,6 +171,7 @@
   flex-direction: column;
   min-height: 100%;
   margin-top: 50px;
+  position: relative;
 }
 
 @media (min-width: 992px) {
