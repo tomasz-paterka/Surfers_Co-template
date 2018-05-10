@@ -667,17 +667,27 @@
 .our-team .our-team-members {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
 }
 
-.our-team .our-team-members .first {
-  z-index: 1;
-  margin: -40px;
+@media (min-width: 992px) {
+  .our-team .our-team-members {
+    margin-top: -20px;
+  }
 }
 
-.our-team .our-team-members .second {
-  z-index: 2;
-  margin: 5px;
+@media (min-width: 992px) {
+  .our-team .our-team-members .first {
+    position: relative;
+    z-index: 1;
+    margin: -20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .our-team .our-team-members .second {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .our-team .our-team-members .team-member {
@@ -692,8 +702,20 @@
   box-shadow: 10px 17px 50px rgba(0, 0, 0, 0.2);
 }
 
-.our-team .our-team-members .team-member:hover {
-  background-color: #00b0ff;
+@media (min-width: 992px) {
+  .our-team .our-team-members .team-member:hover {
+    background-color: #00b0ff;
+  }
+  .our-team .our-team-members .team-member:hover h6 {
+    color: #ffffff;
+  }
+  .our-team .our-team-members .team-member:hover a {
+    color: #b3e7ff;
+  }
+  .our-team .our-team-members .team-member:hover .team-pic {
+    border: 1.5px solid #fff;
+    border-radius: 100%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -708,6 +730,32 @@
     flex: 50%;
     max-width: 50%;
   }
+}
+
+.our-team .our-team-members .team-member .team-pic {
+  margin: 15px;
+}
+
+.our-team .our-team-members .team-member h6 {
+  color: #00b0ff;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.our-team .our-team-members .team-member a {
+  color: #8c8c8c;
+  font-family: "Raleway";
+  font-size: 14px;
+}
+
+.our-team .our-team-members .team-member a .fas {
+  margin: 0 5px;
+}
+
+.our-team .our-team-members .team-member .team-wave {
+  padding: 15px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

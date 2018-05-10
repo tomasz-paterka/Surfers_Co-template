@@ -523,19 +523,24 @@ $grid-breakpoints: (
 	.our-team-members {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0;
+		@include media-breakpoint-up(lg) {
+			margin-top: -20px;
+		}
 		.first {
-			//position: relative;
-			z-index: 1;
-			margin: -40px;
+			@include media-breakpoint-up(lg) {
+				position: relative;
+				z-index: 1;
+				margin: -20px;
+			}
 		}
 		.second {
-			//position: relative;
-			z-index: 2;
-			margin: 5px;
+			@include media-breakpoint-up(lg) {
+				position: relative;
+				z-index: 2;
+				
+			}
 		}
 		.team-member {
-			//position: relative;
 			width: 260px;
 			height: 278px;
 			background-color: #fff;
@@ -545,8 +550,20 @@ $grid-breakpoints: (
 			align-items: center;
 			flex-direction: column;
 			box-shadow: 10px 17px 50px rgba(0, 0, 0, 0.2);
-			&:hover {
-				background-color: #00b0ff;
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					background-color: #00b0ff;
+					h6 {
+						color: $second-font-color;
+					}
+					a {
+						color: #b3e7ff;
+					}
+					.team-pic {
+						border: 1.5px solid #fff;
+						border-radius: 100%;
+					}
+				}
 			}
 			@include media-breakpoint-between(xs, sm) {
 				flex: 100%;
@@ -555,6 +572,27 @@ $grid-breakpoints: (
 			@include media-breakpoint-between(sm, md) {
 				flex: 50%;
 				max-width: 50%;
+			}
+			.team-pic  {
+				margin: 15px;
+			}
+			h6 {
+				color: #00b0ff;
+				font-family: $main-font;
+				font-size: 18px;
+				font-weight: 700;
+				margin: 0;
+			}
+			a {
+				color: #8c8c8c;
+				font-family: $second-font;
+				font-size: 14px;
+				.fas {
+					margin: 0 5px;
+				}
+			}
+			.team-wave {
+				padding: 15px 0;
 			}
 		}
 	}
