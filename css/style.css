@@ -716,6 +716,14 @@
     border: 1.5px solid #fff;
     border-radius: 100%;
   }
+  .our-team .our-team-members .team-member:hover .team-wave {
+    width: 31px;
+    height: 6px;
+    background: url(../images/hover-waves.png);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 @media (max-width: 767.98px) {

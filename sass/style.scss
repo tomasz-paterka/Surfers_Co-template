@@ -563,6 +563,14 @@ $grid-breakpoints: (
 						border: 1.5px solid #fff;
 						border-radius: 100%;
 					}
+					.team-wave {
+						width: 31px;
+						height: 6px;
+						background: url(../images/hover-waves.png);
+						display: block;
+						background-repeat: no-repeat;
+						background-position: center;
+					}
 				}
 			}
 			@include media-breakpoint-between(xs, sm) {
