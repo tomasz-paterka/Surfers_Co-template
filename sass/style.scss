@@ -494,7 +494,7 @@ $grid-breakpoints: (
 }
 .our-team {
 	margin-top: 5rem;
-	margin-bottom: 500px;
+	margin-bottom: 200px;
 	@include media-breakpoint-up(lg) {
 		margin-top: 20rem;
 	}
@@ -553,6 +553,7 @@ $grid-breakpoints: (
 			@include media-breakpoint-up(lg) {
 				&:hover {
 					background-color: #00b0ff;
+					transition: all 1s ease;
 					h6 {
 						color: $second-font-color;
 					}
@@ -605,3 +606,96 @@ $grid-breakpoints: (
 		}
 	}
 }
+.updates {
+	margin-bottom: 200px;
+	.updates-header {
+		margin-bottom: 40px;
+		h6 {
+			font-weight: 700;
+			color: $main-font-color;
+			font-family: $main-font;
+			font-size: 18px;
+			letter-spacing: 2.52px;
+		}
+	}
+	.updates-content {
+		display: flex;
+		margin: 0 30px;
+		flex-wrap: wrap;
+		@include media-breakpoint-up(lg) {
+			margin: 0 70px;
+		}
+		.updates-item {
+			flex: 1;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			margin: 0 10px;
+			background-color: #ffffff;
+			@include media-breakpoint-up(lg) {
+				&:hover {
+					box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+					transition: all 1s ease;
+				}
+			}
+			@include media-breakpoint-between(xs, md) {
+				align-items: center;
+				flex: 100%;
+				max-width: 100%;
+			}
+			.updates-item-pic {
+				position: relative;
+				img {
+					display: block;
+					object-fit: cover;
+					@include media-breakpoint-up(lg) {
+						width: 100%;
+					}
+				}
+				@include media-breakpoint-up(lg) {
+					.updates-item-pic-layer {
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+						transition: all 0.5s ease;
+						opacity: 0;
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+			.updates-item-text {
+				flex: 1;
+				padding: 20px 50px 20px 30px;
+				p {
+					color: #787878;
+					font-family: $second-font;
+					font-size: 16px;
+					line-height: 24px;
+					margin: 0 auto;
+					@include media-breakpoint-up(lg) {
+						&:hover {
+							color: #0022ff;
+						}
+					}
+				}
+			}
+		}
+	}
+	.btn {
+		margin-top: 40px;
+		background-color: #00b0ff;
+		color: $second-font-color;
+		font-family: $main-font;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 1.4px;
+		padding: 10px 35px;
+		border-radius: 0;
+	}
+}
+
