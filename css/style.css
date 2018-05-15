@@ -700,12 +700,12 @@
   align-items: center;
   flex-direction: column;
   box-shadow: 10px 17px 50px rgba(0, 0, 0, 0.2);
+  transition: all 1s ease-in-out;
 }
 
 @media (min-width: 992px) {
   .our-team .our-team-members .team-member:hover {
     background-color: #00b0ff;
-    transition: all 1s ease;
   }
   .our-team .our-team-members .team-member:hover h6 {
     color: #ffffff;
@@ -792,10 +792,13 @@
 @media (min-width: 992px) {
   .updates .updates-content {
     margin: 0 70px;
+    position: relative;
+    z-index: 2;
   }
 }
 
 .updates .updates-content .updates-item {
+  transition: all 1s ease-in-out;
   flex: 1;
   display: flex;
   justify-content: space-between;
@@ -807,7 +810,9 @@
 @media (min-width: 992px) {
   .updates .updates-content .updates-item:hover {
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
-    transition: all 1s ease;
+    transform: scale(1.2);
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -851,8 +856,16 @@
 }
 
 .updates .updates-content .updates-item .updates-item-text {
+  text-align: center;
   flex: 1;
-  padding: 20px 50px 20px 30px;
+  padding: 20px 60px;
+}
+
+@media (min-width: 992px) {
+  .updates .updates-content .updates-item .updates-item-text {
+    padding: 20px 50px 20px 30px;
+    text-align: left;
+  }
 }
 
 .updates .updates-content .updates-item .updates-item-text p {
