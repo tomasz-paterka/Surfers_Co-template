@@ -36,7 +36,7 @@ $grid-breakpoints: (
 
 * {
 	box-sizing: border-box;
-	//border: 1px solid red;
+	//border: 0.5px solid white;
 }
 
 .jumbotron {
@@ -710,14 +710,10 @@ $grid-breakpoints: (
 	}
 }
 .social-media {
-	//margin-bottom: 500px;
 	padding: 0;
-	
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	/*position: relative;
-	z-index: 2;*/
 	@include media-breakpoint-down(lg) {
 		margin-top: 150px;
 	}
@@ -735,9 +731,8 @@ $grid-breakpoints: (
 		transform: translateY(30%);
 	}
 	.instagram {
-		
 		margin: 0 10px;
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 		@include media-breakpoint-up(lg) {
 			&:hover {
 				box-shadow: 0 2px 30px rgba(255,255,255, 0.8);
@@ -747,20 +742,15 @@ $grid-breakpoints: (
 			opacity: 0.03;
 			color: $main-font-color;
 			font-family: $main-font;
-			font-size: 30px;
+			font-size: 35px;
 			font-weight: 700;
 			letter-spacing: 5px;
 			line-height: 60px;
-			@include media-breakpoint-between(sm, md) {
-				//font-size: 50px;
-			}
 			@include media-breakpoint-between(lg, xl) {
 				font-size: 70px;
-				//letter-spacing: 5px;
 			}
 			@include media-breakpoint-up(xl) {
 				font-size: 90px;
-				//letter-spacing: 5px;
 			}
 		}
 		.instagram-bar {
@@ -804,14 +794,109 @@ $grid-breakpoints: (
 	}
 	.facebook {
 		margin: 0 25px;
-		margin-top: 100px;
+		margin-top: 70px;
 		padding: 5px;
-		
+		@include media-breakpoint-up(lg) {
+			margin-top: 100px;
+		}
 	}
 }
 footer {
-	/*position: relative;
-	z-index: 1;*/
 	background-color: #000000;
-	min-height: 50vh;
+	min-height: 60vh;
+	@include media-breakpoint-down(lg) {
+		margin-top: 50px;
+	}
+	.footer-copyright {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 30px;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-top: 250px;
+		}
+		p,
+		a {
+			color: #4d4d4d;
+			font-family: $second-font;
+			font-size: 14px;
+			margin: 0;
+			transition: all 0.5s ease-in-out;
+			&:hover {
+				color: $second-font-color;
+				transform: scale(1.2);
+			}
+		}
+		img {
+			padding: 0 15px;
+			font-size: 5px;
+		}
+	}
+	.footer-links {
+		margin-top: 30px;
+		@include media-breakpoint-up(lg) {
+			margin-top: 50px;
+		}
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			right: 0;
+		}
+		.footer-links-item {
+			a {
+				color: $second-font-color;
+				font-family: $second-font;
+				font-size: 14px;
+				line-height: 34px;
+				text-decoration: none;
+				@include media-breakpoint-up(lg) {
+					&:hover {
+						color: #00b0ff;
+					}
+				}	
+			}
+		}
+		img {
+			padding: 5px;
+		}
+		form {
+			margin-top: 50px;
+			@include media-breakpoint-up(lg) {
+				margin-top: 200px;
+			}
+		}
+		label {
+			display: flex;
+			color: $second-font-color;
+			font-family: $main-font;
+		}
+		.form-group {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 30px;
+			.form-control {
+				background-color: transparent;
+				border: none;
+				border-bottom: 1px solid #4d4d4d;
+				padding: 10px 60px 10px 5px;
+				&::placeholder {
+					font-family: $second-font;
+					color: #4d4d4d;;
+					line-height: 34px;
+				}
+			}
+			.btn {
+				border-radius: 100%;
+				width: 30px;
+				height: 30px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #00b0ff;
+			}
+		}
+	}
 }
