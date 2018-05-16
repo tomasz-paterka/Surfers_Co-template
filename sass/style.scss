@@ -375,8 +375,11 @@ $grid-breakpoints: (
 	}
 }
 .about-us {
-	margin-top: 50px;
+	margin-top: 100px;
 	padding: 0;
+	@include media-breakpoint-up(lg) {
+		margin-top: 200px;
+	}
 	.about-us-header {
 		padding: 0 5px;
 		opacity: 0.03;
@@ -386,7 +389,7 @@ $grid-breakpoints: (
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 15px;
-		line-height: 1;
+		line-height: 50px;
 		@include media-breakpoint-between(sm, md) {
 			font-size: 90px;
 		}
@@ -607,7 +610,6 @@ $grid-breakpoints: (
 	}
 }
 .updates {
-	margin-bottom: 200px;
 	.updates-header {
 		margin-bottom: 40px;
 		h6 {
@@ -620,7 +622,6 @@ $grid-breakpoints: (
 	}
 	.updates-content {
 		display: flex;
-		margin: 0 30px;
 		flex-wrap: wrap;
 		@include media-breakpoint-up(lg) {
 			margin: 0 70px;
@@ -709,11 +710,17 @@ $grid-breakpoints: (
 	}
 }
 .social-media {
-	margin-bottom: 500px;
+	//margin-bottom: 500px;
 	padding: 0;
+	
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	/*position: relative;
+	z-index: 2;*/
+	@include media-breakpoint-down(lg) {
+		margin-top: 150px;
+	}
 	@include media-breakpoint-between(xs, sm) {
 		flex-direction: column;
 		flex: 100%;
@@ -724,19 +731,43 @@ $grid-breakpoints: (
 		flex: 50%;
 		max-width: 50%;
 	}
+	@include media-breakpoint-up(xl) {
+		transform: translateY(30%);
+	}
 	.instagram {
+		
 		margin: 0 10px;
 		transition: all 1s ease-in-out;
 		@include media-breakpoint-up(lg) {
 			&:hover {
-				box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
-
+				box-shadow: 0 2px 30px rgba(255,255,255, 0.8);
+			}
+		}
+		.instagram-header {
+			opacity: 0.03;
+			color: $main-font-color;
+			font-family: $main-font;
+			font-size: 30px;
+			font-weight: 700;
+			letter-spacing: 5px;
+			line-height: 60px;
+			@include media-breakpoint-between(sm, md) {
+				//font-size: 50px;
+			}
+			@include media-breakpoint-between(lg, xl) {
+				font-size: 70px;
+				//letter-spacing: 5px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 90px;
+				//letter-spacing: 5px;
 			}
 		}
 		.instagram-bar {
 			display: flex;
 			justify-content:flex-start;
 			align-items: center;
+			background-color: #ffffff;
 			a {
 				text-decoration: none;
 			}
@@ -746,9 +777,12 @@ $grid-breakpoints: (
 			p, .fab {
 				margin: 0;
 				color: #00b0ff;
-				font-size: 24px;
+				font-size: 18px;
 				font-weight: 700;
 				text-transform: uppercase;
+				@include media-breakpoint-up(md) {
+					font-size: 24px;
+				}
 				@include media-breakpoint-up(lg) {
 					&:hover {
 						color: $main-font-color;
@@ -770,8 +804,14 @@ $grid-breakpoints: (
 	}
 	.facebook {
 		margin: 0 25px;
-		margin-top: 50px;
+		margin-top: 100px;
 		padding: 5px;
-
+		
 	}
+}
+footer {
+	/*position: relative;
+	z-index: 1;*/
+	background-color: #000000;
+	min-height: 50vh;
 }
