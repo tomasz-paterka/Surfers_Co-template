@@ -713,44 +713,65 @@ $grid-breakpoints: (
 	padding: 0;
 	display: flex;
 	justify-content: center;
-	//align-items: center;
 	flex-wrap: wrap;
 	@include media-breakpoint-between(xs, sm) {
-		//flex-direction: column;
+		flex-direction: column;
 		flex: 100%;
 		max-width: 100%;
 	}
 	@include media-breakpoint-between(sm, md) {
-		//flex-direction: column;
+		flex-direction: column;
 		flex: 50%;
 		max-width: 50%;
 	}
 	.instagram {
-		
 		margin: 0 10px;
-		
+		transition: all 1s ease-in-out;
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+
+			}
+		}
+		.instagram-bar {
+			display: flex;
+			justify-content:flex-start;
+			align-items: center;
+			a {
+				text-decoration: none;
+			}
+			.fab {
+				padding: 20px;	
+			}
+			p, .fab {
+				margin: 0;
+				color: #00b0ff;
+				font-size: 24px;
+				font-weight: 700;
+				text-transform: uppercase;
+				@include media-breakpoint-up(lg) {
+					&:hover {
+						color: $main-font-color;
+					}
+				}
+			}
+			.instagram-mail {
+				margin-left: 30px;
+				color: $main-font-color;
+				font-family: $second-font;
+				font-size: 16px;
+				@include media-breakpoint-up(lg) {
+					&:hover {
+						color: #b3e7ff;
+					}
+				}
+			}
+		}
 	}
 	.facebook {
-		flex: 1;
 		margin: 0 25px;
 		margin-top: 50px;
-		
-		background-image: url(../images/fb-bg.png);
-		background-repeat: no-repeat;
-		
-		display: flex;
-		flex-direction: column;
-		//justify-content: center;
-		align-items: center;
-		
-		.fb-logo {
-			
-			padding: 30px 0;
-			
-		
-		}
-		.fb-box {
-			
-		}
+		padding: 5px;
+
 	}
 }

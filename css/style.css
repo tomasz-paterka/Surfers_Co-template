@@ -904,6 +904,7 @@
 
 @media (max-width: 767.98px) {
   .social-media {
+    flex-direction: column;
     flex: 100%;
     max-width: 100%;
   }
@@ -911,6 +912,7 @@
 
 @media (min-width: 576px) and (max-width: 991.98px) {
   .social-media {
+    flex-direction: column;
     flex: 50%;
     max-width: 50%;
   }
@@ -918,21 +920,60 @@
 
 .social-media .instagram {
   margin: 0 10px;
+  transition: all 1s ease-in-out;
 }
 
-.social-media .facebook {
-  flex: 1;
-  margin: 0 25px;
-  margin-top: 50px;
-  background-image: url(../images/fb-bg.png);
-  background-repeat: no-repeat;
+@media (min-width: 992px) {
+  .social-media .instagram:hover {
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.social-media .instagram .instagram-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.social-media .facebook .fb-logo {
-  padding: 30px 0;
+.social-media .instagram .instagram-bar a {
+  text-decoration: none;
+}
+
+.social-media .instagram .instagram-bar .fab {
+  padding: 20px;
+}
+
+.social-media .instagram .instagram-bar p, .social-media .instagram .instagram-bar .fab {
+  margin: 0;
+  color: #00b0ff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .social-media .instagram .instagram-bar p:hover, .social-media .instagram .instagram-bar .fab:hover {
+    color: #000000;
+  }
+}
+
+.social-media .instagram .instagram-bar .instagram-mail {
+  margin-left: 30px;
+  color: #000000;
+  font-family: "Raleway";
+  font-size: 16px;
+}
+
+@media (min-width: 992px) {
+  .social-media .instagram .instagram-bar .instagram-mail:hover {
+    color: #b3e7ff;
+  }
+}
+
+.social-media .facebook {
+  margin: 0 25px;
+  margin-top: 50px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
